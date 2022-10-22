@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] LayerMask platformLayerMask;
-    Rigidbody2D rb;
-    BoxCollider2D boxColl;
-    Animator animate;
-    SpriteRenderer sprite;
+    [SerializeField] protected LayerMask platformLayerMask;
+    protected Rigidbody2D rb;
+    protected BoxCollider2D boxColl;
+    protected Animator animate;
+    protected SpriteRenderer sprite;
 
-
-    float horizontalInput;
+    protected float horizontalInput;
     protected float playerSpeed = 7f;
     protected float jumpStrength = 17f;
-    
-    bool facingRight = true;
 
-    float transformationTime = 0.17f;
+    protected bool grounded = false;
+    protected bool facingRight = true;
+
+    private float transformationTime = 0.17f;
 
     protected virtual void Start()
     {
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
         // jumping logic
-        bool grounded = IsGrounded();
+        grounded = IsGrounded();
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             Jump();
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    protected void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         // Perform physics actions
         MovePlayer();
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
             Debug.DrawRay(boxColl.bounds.center - boxColl.bounds.extents, Vector2.right * boxColl.bounds.size.x, boxColour);
         }
 
-        return raycastHit.collider != null;
+        return raycastHasHit;
     }
 
     public IEnumerator TransformCharacterOut()

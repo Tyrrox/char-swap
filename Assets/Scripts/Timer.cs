@@ -7,10 +7,10 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     private bool timerRunning = false;
+
     private float totalTime = 0f;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (timerRunning)
         {

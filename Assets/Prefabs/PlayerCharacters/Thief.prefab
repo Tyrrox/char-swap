@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2010859289686970866}
   - component: {fileID: 2010859289686970867}
   - component: {fileID: 2010859289686970876}
-  - component: {fileID: 2010859289686970864}
+  - component: {fileID: 1181918582287037618}
   - component: {fileID: 2010859289686970871}
   m_Layer: 0
   m_Name: Thief
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 71007097
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 339a458342f692844ad6c5bd41b0b1ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -135,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &2010859289686970864
+--- !u!114 &1181918582287037618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2010859289686970877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 966240a686174744d812be273643f0d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 59cd336d2a681094e93460cd2b4bf795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   platformLayerMask:

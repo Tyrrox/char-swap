@@ -11,6 +11,7 @@ public class NinjaController : PlayerController
      * SLIGHTLY INCREASED SPEED
      */
 
+    [SerializeField] private ParticleSystem jumpEffect;
     private bool canDoubleJump;
 
     // Adjust player values for ninja character
@@ -24,12 +25,13 @@ public class NinjaController : PlayerController
     protected override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.Space) && canDoubleJump)
+        if (Input.GetKeyDown(KeyCode.Space) && !grounded && canDoubleJump)
         {
             canDoubleJump = false;
+            jumpEffect.Play();
             Jump();
         }
-        if (!canDoubleJump && IsGrounded())
+        if (!canDoubleJump && grounded)
         {
             canDoubleJump = true;
         }

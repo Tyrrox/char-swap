@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FinishBehaviour : MonoBehaviour
 {
-    [SerializeField] GameObject finishMenu;
-    [SerializeField] GameObject finishTimeText;
+    [SerializeField] private GameObject finishMenu;
+    [SerializeField] private GameObject finishTimeText;
 
     // When the player finishes the level
     private void OnTriggerEnter2D(Collider2D collision)

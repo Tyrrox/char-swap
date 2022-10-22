@@ -9,12 +9,12 @@ public class FollowPlayer : MonoBehaviour
     private Transform followTarget;
     private CinemachineVirtualCamera vcam;
     
-    void Start()
+    private void Start()
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
     }
 
-    void Update()
+    private void Update()
     {
         // Change follow target if current follow target ceases to exist or becomes inactive.
         if (player == null || !player.activeInHierarchy)

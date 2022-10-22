@@ -5,7 +5,7 @@ using TMPro;
 
 public class SetSwapsText : MonoBehaviour
 {
-    TextMeshProUGUI swapsText;
+    private TextMeshProUGUI swapsText;
 
     void Start()
     {

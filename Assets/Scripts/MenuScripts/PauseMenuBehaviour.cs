@@ -34,6 +34,7 @@ public class PauseMenuBehaviour : MonoBehaviour
         pauseMenu.SetActive(false);
         GameManager.gameManager.UnpauseGame();
         LevelManager.levelManager.StartLevelTimer();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void LoadMainMenu()

@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
     {
         GamePaused = true;
         Time.timeScale = 0f;
+
+        // Unlock cursor during pause
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void UnpauseGame()

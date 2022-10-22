@@ -22,8 +22,12 @@ public class LevelManager : MonoBehaviour
         {
             levelManager = this;
         }
+        // Start the level timer for end of level time
         levelTimer = GetComponent<Timer>();
         levelTimer.StartTimer();
+
+        // Lock the cursor during gameplay
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()

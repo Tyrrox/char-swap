@@ -5,9 +5,9 @@ using TMPro;
 
 public class SetLevelTimeText : MonoBehaviour
 {
-    TextMeshProUGUI levelTimeText;
+    private TextMeshProUGUI levelTimeText;
 
-    void Start()
+    private void Start()
     {
         levelTimeText = GetComponent<TextMeshProUGUI>();
         SetLevelTime();

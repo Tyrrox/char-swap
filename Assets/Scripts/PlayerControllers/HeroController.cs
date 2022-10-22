@@ -10,8 +10,9 @@ public class HeroController : PlayerController
      * SPRINT ABILITY
      */
 
-    [SerializeField] ParticleSystem sprintDust;
+    [SerializeField] private ParticleSystem sprintDust;
     private bool isSprinting = false;
+
     private float baseSpeed;
     private float sprintSpeed = 10f;
 
