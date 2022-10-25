@@ -36,10 +36,20 @@ public class ThiefController : PlayerController
         {
             // disable gravity to climb, or hold still
             rb.gravityScale = 0f;
+            
+            // If not already playing the climbing animation, start the animation
+            if (!animate.GetCurrentAnimatorStateInfo(0).IsName("Climbing"))
+            {
+                animate.SetBool("IsClimbing", true);
+                animate.Play("Climbing");
+            }
+
             ClimbPlayer();
         }
         else
         {
+            animate.SetBool("IsClimbing", false);
+
             // enable gravity for moving, base movement
             rb.gravityScale = baseGravityScale;
             base.FixedUpdate();
@@ -70,10 +80,14 @@ public class ThiefController : PlayerController
         return false;
     }
 
-    // Climb the player if they're holding the relevant movement input towards the wall
+    // Player climbs up or down the wall depending on movement input while holding climb button
     private void ClimbPlayer()
     {
+        // Climb up if moving towards the wall, climb down if moving away from the wall
         float climbingInput = facingRight ? horizontalInput : -horizontalInput;
-        rb.velocity = new Vector2(0f, Mathf.Max(0, climbingInput * climbingSpeed));
+        rb.velocity = new Vector2(0f, climbingInput * climbingSpeed);
+
+        // Play or reverse animation based on movement
+        animate.SetFloat("ClimbingMultiplier", climbingInput);
     }
 }

@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
     protected virtual void ActivateAbility()
     {
-        Debug.Log("Ability Active.");
+
     }
 
     private void MovePlayer()
