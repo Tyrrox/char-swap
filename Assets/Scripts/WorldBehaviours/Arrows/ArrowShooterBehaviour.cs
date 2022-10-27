@@ -16,15 +16,11 @@ public class ArrowShooterBehaviour : MonoBehaviour
         StartCoroutine(RepeatArrowFire());
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void FireArrow()
     {
         // Get direction the shooter is facing via scale, scale 1 = looking right
-        float zRotation = -90 * transform.localScale.x;
+        float direction = (transform.localScale.x > 0) ? transform.right.x : -transform.right.x;
+        float zRotation = -90 * direction;
 
         Instantiate(arrowPrefab, firingPoint.transform.position, Quaternion.Euler(0, 0, zRotation));
     }

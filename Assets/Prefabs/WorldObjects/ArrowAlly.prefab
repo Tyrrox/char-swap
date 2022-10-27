@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7766869027315822372}
   - component: {fileID: 5752313178440465502}
-  - component: {fileID: 6052307470847562496}
   - component: {fileID: 8761937693298492928}
+  - component: {fileID: 4015695928658643883}
+  - component: {fileID: 5792957385633471910}
   m_Layer: 0
-  m_Name: ArrowEnemy
+  m_Name: ArrowAlly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3b30d1cd7f277d842ab27892446ec09e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d05e22a0fc675364e8e4d55a305c807c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6052307470847562496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5069053367051226283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4f4699a76c42e4d9b89f53035b0754, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &8761937693298492928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -108,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.14828941}
@@ -124,3 +113,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.26815796, y: 1.303421}
   m_EdgeRadius: 0
+--- !u!50 &4015695928658643883
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5069053367051226283}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &5792957385633471910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5069053367051226283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2188cc607c96fe04fa8e1980cbc5428e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

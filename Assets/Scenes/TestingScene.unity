@@ -504,8 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacterPrefabs:
-  - {fileID: 2010859289686970877, guid: 1f799d2291638bc4298ae1f95ae7e7d2, type: 3}
-  - {fileID: 4497805530271251970, guid: b9e7f24d9c1135f459f703532dd98d4b, type: 3}
+  - {fileID: 2010859289686970877, guid: d2360e0a6371f9443b676f01bfc3313b, type: 3}
   - {fileID: 2010859289686970877, guid: 2b09c5fba54f6554aab279907030451b, type: 3}
 --- !u!4 &556263962
 Transform:
@@ -1757,7 +1756,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
